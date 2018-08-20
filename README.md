@@ -10,8 +10,8 @@ We use two datasets for training the system.
 1. The dataset is provided for the SemEval-2018 shared task [SemEval-2018 Task 1: Affect in Tweets](http://saifmohammad.com/WebDocs/semeval2018-task1.pdf).
 2. The dataset is provided for the SemEval-2017 shared task [SemEval-2017 task 4: Sentiment analysis in Twitter](http://www.aclweb.org/anthology/S17-2088).
 
-The SemEval-2018 include training, development, and test datasets.
-The all datasets of SemEval-2017 are regarded as training data.
+The SemEval-2018 includes training, development, and test datasets.
+And all datasets of SemEval-2017 are regarded as training data.
 
 ## Pre-processing
 
