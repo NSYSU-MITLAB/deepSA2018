@@ -20,11 +20,11 @@ The parameter &lt;usage of data&gt; can take three possible values:
   * train : Only using the SemEval-2018 training data and SemEval-2017 data to train three class model in the system. Other class models are trained by SemEval-2018 training data. (The best method for training.)
   
 The parameter &lt;embedding&gt; can take five possible values:
-  * GloVe-T :
-  * GloVe-G :
-  * ACL-2015 :
-  * Word2Vec :
-  * Self : The embedding set is our own collection of 140 million tweets from the Twitter API, and is pre-trained using the Skip-gram model.
+  * glove-t :
+  * glove-g :
+  * acl2015 :
+  * word2vec :
+  * self : The embedding set is our own collection of 140 million tweets from the Twitter API, and is pre-trained using the Skip-gram model.
   
 The parameter &lt;class weights&gt; can take two possible values:
   * True : Training the system with skewness robust class weights.
