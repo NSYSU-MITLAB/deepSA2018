@@ -56,6 +56,9 @@ The our own embedding set is our own collection of 140 million tweets from the T
 
 The **self** embedding set available in the links: [Download link](https://drive.google.com/file/d/15zgPiqPS2Zu1Y7jx9izyQeR11dv7K0cN/view?usp=sharing)
 
+## Lexicons
+We use four sentiment lexicons, including [AFINN](http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010) [6], [Sentiment140](https://github.com/okugami79/sentiment140) [7], [Sentistrength](http://sentistrength.wlv.ac.uk/) [8] and [Vader](https://github.com/cjhutto/vaderSentiment) [9].
+
 ## Training
 ```bash
 python system.py <usage of data> <embedding> <class weights> <lexicon features>
@@ -97,10 +100,10 @@ python stacking.py
 ```
 
 ## Prerequisites
-* Tensorflow 
-* Keras 
+* Tensorflow (>= 1.3.0)
+* Keras (>= 2.1.0)
 * Numpy
-* Python
+* Python (>= 2.7.6)
 * [ekphrasis](https://github.com/cbaziotis/ekphrasis)
 
 ## References
@@ -113,3 +116,11 @@ python stacking.py
 [4] Timothy Baldwin, Marie-Catherine de Marneffe, Bo Han, Young-Bum Kim, Alan Ritter, and Wei Xu. 2015. Shared tasks of the 2015 workshop on noisy user-generated text: Twitter lexical normalization and named entity recognition. In Proceedings of the Workshop on Noisy User-generated Text, pages 126–135.
 
 [5] Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg S Corrado, and Jeff Dean, “Distributed representations of words and phrases and their compositionality,” in Advances in neural information processing systems, 2013, pp. 3111–3119.
+
+[6] F. &Aring;. Nielsen, “A new anew: Evaluation of a word list for sentiment analysis in microblogs,” arXiv preprint arXiv:1103.2903, 2011.
+
+[7] S. M. Mohammad, S. Kiritchenko, and X. Zhu, “Nrc-canada: Building the state-of-the-art in sentiment analysis of tweets,” arXiv preprint arXiv:1308.6242, 2013.
+
+[8] M. Thelwall, K. Buckley, G. Paltoglou, D. Cai, and A. Kappas, “Sentiment strength detection in short informal text,” Journal of the American Society for Information Science and Technology, vol. 61, no. 12, pp. 2544–2558, 2010.
+
+[9] C. H. E. Gilbert, “Vader: A parsimonious rule-based model for sentiment analysis of social media text,” in Eighth International Conference on Weblogs and Social Media (ICWSM-14). Available at (20/04/16) http://comp.social.gatech.edu/papers/icwsm14.vader.hutto.pdf, 2014.
