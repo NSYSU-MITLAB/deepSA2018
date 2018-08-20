@@ -14,23 +14,23 @@ We improve the system, and the Pearson correlation coefficient is 0.806 on the t
 ```bash
 python system.py <usage of data> <embedding> <class weights> <lexicon features>
 ```
-The parameter <usage of data> can take three possible values:
+The parameter &<usage of data> can take three possible values:
   * train-18 : Using the SemEval-2018 training data to train the system.<br>
   * train-all : Using the SemEval-2018 training data and SemEval-2017 data to train the system.<br>
   * train : Only using the SemEval-2018 training data and SemEval-2017 data to train three class model of the system. Other class models are trained by SemEval-2018 training data. (The best method for training.)
   
-The parameter <embedding> can take five possible values:
+The parameter &lt;embedding&gt; can take five possible values:
   * GloVe-T :
   * GloVe-G :
   * ACL-2015 :
   * Word2Vec :
   * Self :
   
-The parameter <class weights> can take two possible values:
+The parameter &<class weights> can take two possible values:
   * True : Training the system with skewness robust class weights.
   * False : Training the system without skewness robust class weights.
   
-The parameter <lexicon features> can take two possible values:
+The parameter &<lexicon features> can take two possible values:
   * True : Adding the lexicon features, and concatenating with word vector.
   * False : Not using lexicon features.
   
