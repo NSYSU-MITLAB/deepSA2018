@@ -9,7 +9,7 @@ We improve the system which is based on the our previous work.
 Our system consists of five class models, namely three class model, negative model, neutral class model, positive class model, and seven class model.
 Different labels are used in different sub-models to learn the polar representation of tweets.
 We change the usage of data, add the class weights, add the lexicon features, and train own word vector.
-In addition, we retrain the [DeepMoji](https://github.com/bfelbo/DeepMoji) model with transfer learning, and weighted average with polar classification results of our system.
+In addition, we retrain the [DeepMoji](https://github.com/bfelbo/DeepMoji) [1] model with transfer learning, and weighted average with polar classification results of our system.
 The Pearson correlation coefficient is 0.806 on the test data and could be ranked 4th in the competition.
 
 ## Data
@@ -22,19 +22,41 @@ The SemEval-2018 includes training, development, and test datasets.<br>
 And all datasets of SemEval-2017 are regarded as training data.
 
 ## Pre-processing
-Tweets are pre-processed using [ekphrasis](https://github.com/cbaziotis/ekphrasis) tool.
+Tweets are pre-processed using [ekphrasis](https://github.com/cbaziotis/ekphrasis) [2] tool.
 ```bash
 python preprocessing.py
 ```
 
 ## Embedding
 We use four embedding sets which are publicly available and one our own embedding set.<br>
-Pre-training is performed on aggregated global word-word co-occurrence statistics from a corpus. [GloVe](https://nlp.stanford.edu/projects/glove/)<br>
-Pre-training word vector by skip-gram architectures. [ACL-2015](https://www.fredericgodin.com/software/), [word2vec](https://code.google.com/archive/p/word2vec/)<br>
-The our own embedding set is our own collection of 140 million tweets from the Twitter API, and is pre-trained using the skip-gram model.<br>
-The **self** embedding set available in the links: [Download link](http://)
+Pre-training is performed on aggregated global word-word co-occurrence statistics from a corpus. [GloVe](https://nlp.stanford.edu/projects/glove/) [3]<br>
+Pre-training word vector by skip-gram architectures. [ACL-2015](https://www.fredericgodin.com/software/) [4], [word2vec](https://code.google.com/archive/p/word2vec/) [5]<br>
+The our own embedding set is our own collection of 140 million tweets from the Twitter API, and the processed tweets are pre-trained using the skip-gram model.<br>
 
-## Usage
+<table>
+  <tr>
+    <th>Sets</th><th>Algorithm</th><th>Corpus</th><th>Dimension</th><th>Vocabulary</th>
+  </tr>
+  <tr>
+    <td>GloVe-T</td><td rowspan=2>GloVe</td><td>Twitter</td><td>200</td><td>1.2M</td>
+  </tr>
+   <tr>
+    <td>GloVe-G</td><td>General</td><td>300</td><td>2.2M</td>
+  </tr>
+   <tr>
+    <td>ACL-2015</td><td rowspan=3>Skip-Gram</td><td>Twitter</td><td>400</td><td>3M</td>
+  </tr>
+   <tr>
+    <td>Word2Vec</td><td>Google News</td><td>300</td><td>3M</td>
+  </tr>
+   <tr>
+    <td>Self</td><td>Twitter</td><td>400</td><td>0.46M</td>
+  </tr>
+</table>
+
+The **self** embedding set available in the links: [Download link](https://drive.google.com/file/d/15zgPiqPS2Zu1Y7jx9izyQeR11dv7K0cN/view?usp=sharing)
+
+## Training
 ```bash
 python system.py <usage of data> <embedding> <class weights> <lexicon features>
 ```
@@ -79,6 +101,15 @@ python stacking.py
 * Keras 
 * Numpy
 * Python
+* [ekphrasis](https://github.com/cbaziotis/ekphrasis)
 
 ## References
+[1] Bjarke Felbo, Alan Mislove, Anders Søgaard, Iyad Rahwan, and Sune Lehmann, “Using millions of emoji occurrences to learn any-domain representations for detecting sentiment, emotion and sarcasm,” arXiv preprint arXiv:1708.00524, 2017.
 
+[2] Christos Baziotis, Nikos Pelekis, and Christos Doulkeridis, “Datastories at semeval-2017 task 4: Deep lstm with attention for message-level and topic-based sentiment analysis,” in Proceedings of the 11th International Workshop on Semantic Evaluation (SemEval-2017), Vancouver, Canada, August 2017, pp. 747–754, Association for Computational Linguistics.
+
+[3] Jeffrey Pennington, Richard Socher, and Christopher D.Manning, “Glove: Global vectors for word representation,” in Empirical Methods in Natural Language Processing (EMNLP), 2014, pp. 1532–1543.
+
+[4] Timothy Baldwin, Marie-Catherine de Marneffe, Bo Han, Young-Bum Kim, Alan Ritter, and Wei Xu. 2015. Shared tasks of the 2015 workshop on noisy user-generated text: Twitter lexical normalization and named entity recognition. In Proceedings of the Workshop on Noisy User-generated Text, pages 126–135.
+
+[5] Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg S Corrado, and Jeff Dean, “Distributed representations of words and phrases and their compositionality,” in Advances in neural information processing systems, 2013, pp. 3111–3119.
