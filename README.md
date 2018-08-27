@@ -28,7 +28,7 @@ python preprocessing.py
 ```
 
 ## Embedding
-We use four embedding sets which are publicly available and one our own embedding set.<br>
+We use four embedding sets which are publicly released and one our own embedding set.<br>
 Pre-training is performed on aggregated global word-word co-occurrence statistics from a corpus. [GloVe](https://nlp.stanford.edu/projects/glove/) [3]<br>
 Pre-training word vector by skip-gram architectures. [ACL-2015](https://www.fredericgodin.com/software/) [4], [word2vec](https://code.google.com/archive/p/word2vec/) [5]<br>
 The our own embedding set is our own collection of 140 million tweets from the Twitter API, and the processed tweets are pre-trained using the skip-gram model.<br>
@@ -54,7 +54,7 @@ The our own embedding set is our own collection of 140 million tweets from the T
   </tr>
 </table>
 
-The **self** embedding set available in the links: [Download link](https://drive.google.com/file/d/15zgPiqPS2Zu1Y7jx9izyQeR11dv7K0cN/view?usp=sharing)
+The **self** embedding set is available in the links: [Download link](https://drive.google.com/file/d/15zgPiqPS2Zu1Y7jx9izyQeR11dv7K0cN/view?usp=sharing)
 
 ## Lexicons
 We use four sentiment lexicons, including [AFINN](http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010) [6], [Sentiment140](https://github.com/okugami79/sentiment140) [7], [Sentistrength](http://sentistrength.wlv.ac.uk/) [8] and [Vader](https://github.com/cjhutto/vaderSentiment) [9].
