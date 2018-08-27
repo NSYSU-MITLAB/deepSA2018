@@ -57,7 +57,8 @@ The our own embedding set is our own collection of 140 million tweets from the T
 The **self** embedding set is available in the links: [Download link](https://drive.google.com/file/d/15zgPiqPS2Zu1Y7jx9izyQeR11dv7K0cN/view?usp=sharing)
 
 ## Lexicons
-We use four sentiment lexicons, including [AFINN](http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010) [6], [Sentiment140](https://github.com/okugami79/sentiment140) [7], [Sentistrength](http://sentistrength.wlv.ac.uk/) [8] and [Vader](https://github.com/cjhutto/vaderSentiment) [9].
+We use four sentiment lexicons, including [AFINN](http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010) [6], [Sentiment140](https://github.com/okugami79/sentiment140) [7], [Sentistrength](http://sentistrength.wlv.ac.uk/) [8] and [Vader](https://github.com/cjhutto/vaderSentiment) [9].<br>
+And the score are normalized to [-1,1] respectively.
 
 ## Training
 ```bash
@@ -88,7 +89,8 @@ The parameter &lt;lexicon features&gt; can take two possible values:
 python system.py train self True True
 ```
 ## Ensemble Methods
-We use a simple ensemble method to further boost the performance of tweet polarity classification system.
+We use a simple ensemble method to further boost the performance of tweet polarity classification system.<br>
+You can [download](https://drive.google.com/file/d/10cAf4h2EceYYed86lf8X3q9RpVS22ZDm/view?usp=sharing) our results of trained model, including predictive values, probability, and representations.
 ### Weighted Average
 ```bash
 python weightedaverage.py
