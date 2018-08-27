@@ -58,7 +58,7 @@ The **self** embedding set is available in the links: [Download link](https://dr
 
 ## Lexicons
 We use four sentiment lexicons, including [AFINN](http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010) [6], [Sentiment140](https://github.com/okugami79/sentiment140) [7], [Sentistrength](http://sentistrength.wlv.ac.uk/) [8] and [Vader](https://github.com/cjhutto/vaderSentiment) [9].<br>
-And the score are normalized to [-1,1] respectively.
+And the scores are normalized to [-1,1] respectively.
 
 ## Training
 ```bash
